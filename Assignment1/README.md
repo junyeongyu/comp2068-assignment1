@@ -11,10 +11,13 @@ This Express site includes the pages from your Personal Portfolio 5 pages.<br />
 
 ## Technologies
 
-NodeJS
-Express
-AngularJS
-MongoDB
+1. Back End
+ * NodeJS
+ * Express
+ * MongoDB
+
+2. Front End
+ * Angular 2
 
 ## Usage
 
