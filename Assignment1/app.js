@@ -1,12 +1,11 @@
 var express = require('express')
   , ejs = require('ejs')
   , path = require('path')
-  , mongojs = require('mongojs')
-  , Promise = require('bluebird') // http://stackabuse.com/avoiding-callback-hell-in-node-js/
-  , bodyParser = require('body-parser');
+  , bodyParser = require('body-parser')
+  , mongo = require('./modules/bluebird-mongojs');
 
-var db = mongojs('localhost:27017/test', ['heroes', "mycollection"]);
 var app = express();
+var db = mongo('localhost:27017/test', ['heroes', "mycollection"]);
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -30,7 +29,7 @@ app.use('/users', users);
 app.use('/heroes', heroes);
 
 // test db (temp)
-db.mycollection.find({abc: "def"}, function (err, data){
+db.mycollection.findAsync({abc: "def"}).then(function (data){
 	console.log(data);
 });
 
