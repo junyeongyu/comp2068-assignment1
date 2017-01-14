@@ -2,7 +2,8 @@ var express = require('express')
   , ejs = require('ejs')
   , path = require('path')
   , mongojs = require('mongojs')
-  , Promise = require('bluebird'); // http://stackabuse.com/avoiding-callback-hell-in-node-js/
+  , Promise = require('bluebird') // http://stackabuse.com/avoiding-callback-hell-in-node-js/
+  , bodyParser = require('body-parser');
 
 var db = mongojs('localhost:27017/test', ['heroes', "mycollection"]);
 var app = express();
@@ -15,6 +16,8 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function(req, res, next){ // setting db object in http request

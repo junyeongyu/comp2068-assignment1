@@ -28,6 +28,10 @@ export class HeroDetailComponent implements OnInit {
       .subscribe(hero => this.hero = hero); // '+' convert from string to number
   }
   
+  save(): void {
+    this.heroService.updateHero(this.hero).then(() => this.goBack());
+  }
+  
   goBack(): void {
     this.location.back();
   }

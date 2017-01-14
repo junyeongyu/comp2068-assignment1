@@ -8,15 +8,15 @@ import { Hero } from './hero';
 @Injectable()
 export class HeroService {
   
-  private heroesUrl = 'heroes/list';  // URL to web api
+  private headers = new Headers({'Content-Type': 'application/json'});
   
   constructor(private http: Http) { }
   
   getHeroes(): Promise<Hero[]> {
-    return this.http.get(this.heroesUrl)
-               .toPromise()
-               .then(response => response.json() as Hero[])
-               .catch(this.handleError);
+    return this.http.get('heroes/list')
+        .toPromise()
+        .then(response => response.json() as Hero[])
+        .catch(this.handleError);
   }
   
   getHeroesSlowly(): Promise<Hero[]> {
@@ -27,11 +27,37 @@ export class HeroService {
   }
   
   getHero(id: number): Promise<Hero> {
-    //return this.getHeroes().then(heroes => heroes.find(hero => hero.id === id));
-    const url = 'heroes/detail/' + id;
-    return this.http.get(url)
+    return this.http.get('heroes/detail/' + id)
         .toPromise()
-        .then(response => response.json() as Hero)
+        .then(res => res.json() as Hero)
         .catch(this.handleError);
+  }
+  
+  addHero(name: string): Promise<Hero> {
+    return this.http
+      .post('heroes/save/', {name: name}, {headers: this.headers})
+      .toPromise()
+      .then(res => res.json() as Hero)
+      .catch(this.handleError);
+  }
+  
+  updateHero(hero: Hero): Promise<Hero> {
+    return this.http
+        .put('heroes/save/' + hero.id, hero, {headers: this.headers})
+        .toPromise()
+        .then(() => hero)
+        .catch(this.handleError);
+  }
+  
+  deleteHero(id: number): Promise<void> {
+    return this.http.delete('heroes/delete/' + id, {headers: this.headers})
+      .toPromise()
+      .then(() => null)
+      .catch(this.handleError);
+  }
+  
+  private handleError(error: any): Promise<any> {
+    console.error('An error occurred', error); // for demo purposes only
+    return Promise.reject(error.message || error);
   }
 }
