@@ -2,19 +2,13 @@
 
 # Assignment1
 
-
+This Express site includes the pages from your Personal Portfolio 5 pages
+ – A Home page
+ - An About Me page
+ - A Projects page
+ - A Services page
+ - A Contact Me page
 
 ## Usage
 
-
-
-## Developing
-
-
-
-### Tools
-
-Created with [Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1)
- ([Eclipse Marketplace](http://marketplace.eclipse.org/content/nodeclipse), [site](http://www.nodeclipse.org))   
-
-Nodeclipse is free open-source project that grows with your contributions.
+$ npm start
