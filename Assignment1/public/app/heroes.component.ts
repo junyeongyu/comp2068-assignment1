@@ -64,8 +64,7 @@ import { HeroService } from './hero.service';
       margin-right: .8em;
       border-radius: 4px 0 0 4px;
     }
-  `],
-  providers: [HeroService]
+  `]
 })
 
 export class HeroesComponent implements OnInit {
@@ -73,9 +72,7 @@ export class HeroesComponent implements OnInit {
   heroes: Hero[];
   selectedHero: Hero;
   
-  constructor(private heroService: HeroService) {
-    //console.log('call constructor of HeroesComponent');
-  }
+  constructor(private heroService: HeroService) { }
   
   getHeroes(): void {
     this.heroService.getHeroes().then(heroes => this.heroes = heroes);
