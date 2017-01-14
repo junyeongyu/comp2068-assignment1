@@ -14,15 +14,14 @@ router.get('/detail/:id', function(req, res, next) {
 });
 
 router.post('/save', function(req, res, next) {
-	req.db.heroes.aggregate([{ $group : { _id: null, max: { $max : "$id" }}}], function (err, data){
-		var maxId = data[0].max + 1;
-		
-		// TODO: Nested callback --> Need to be changed using Primise
-		req.db.heroes.insert({id: maxId, name: req.body.name}, function (err, data) {
+	req.db.heroes.aggregateAsync([{ $group : { _id: null, max: { $max : "$id" }}}])
+		.then(function (data) {
+			var maxId = data[0].max + 1;
+			return req.db.heroes.insertAsync({id: maxId, name: req.body.name});
+		})
+		.then(function (data) {
 			res.json(data);
 		});
-	
-	});
 	
 });
 
