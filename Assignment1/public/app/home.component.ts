@@ -8,8 +8,7 @@ import { Component } from '@angular/core';
   		'land.component.css',
   		'about.component.css', 
   		'projects.component.css',
-  		'services.component.css',
-  		'contact.component.css'
+  		'services.component.css'
   ]
 })
 

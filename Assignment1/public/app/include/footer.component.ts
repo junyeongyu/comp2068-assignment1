@@ -1,3 +1,7 @@
+import { Component } from '@angular/core';
+@Component({
+  selector: 'my-footer',
+  template: `
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -29,6 +33,7 @@
             </div>
         </div>
     </footer>
-</body>
-
-</html>
+`
+})
+export class FooterComponent {
+}
