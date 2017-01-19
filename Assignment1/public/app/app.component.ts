@@ -15,17 +15,15 @@ export class AppComponent {
   title = 'Tour of Heroes';
   constructor(private route: ActivatedRoute) { }
 
-  ngOnInit() {
+  ngAfterViewChecked() {
     this.route.fragment.subscribe(f => {
       if (f == false) {
       	return;
       }
-      setTimeout(function () { // Fix: loading interval
-	      const element = document.querySelector("#" + f)
-	      if (element) {
-	        element.scrollIntoView(element);
-	      }
-      }, 50);
+      const element = document.querySelector("#" + f)
+      if (element) {
+        element.scrollIntoView(element);
+      }
     });
   }
   
