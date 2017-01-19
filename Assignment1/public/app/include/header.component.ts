@@ -30,6 +30,9 @@ import { Component } from '@angular/core';
                     <li>
                         <a routerLink="/contact" routerLinkActive="active">Contact Me</a>
                     </li>
+                    <li>
+                        <a href="resources/document/specs.docx">Download Specs</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
