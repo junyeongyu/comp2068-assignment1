@@ -20,11 +20,13 @@ export class AppComponent {
       if (f == false) {
       	return;
       }
-      const element = document.querySelector("#" + f)
-      if (element) {
-      	element.scrollIntoView(element);
-      }
-    })
+      setTimeout(function () { // Fix: loading interval
+	      const element = document.querySelector("#" + f)
+	      if (element) {
+	        element.scrollIntoView(element);
+	      }
+      }, 50);
+    });
   }
   
 }
