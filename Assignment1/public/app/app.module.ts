@@ -9,10 +9,6 @@ import { HeaderComponent }      from './include/header.component';
 import { FooterComponent }      from './include/footer.component';
 
 import { AppComponent }        from './app.component';
-import { DashboardComponent }  from './dashboard.component';
-import { HeroesComponent }     from './heroes.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { HeroService }         from './hero.service';
 import { HomeComponent }       from './home.component';
 import { ContactComponent }    from './contact.component';
 
@@ -27,13 +23,9 @@ import { ContactComponent }    from './contact.component';
     HeaderComponent,
     FooterComponent,
     AppComponent,
-    DashboardComponent,
-    HeroesComponent,
-    HeroDetailComponent,
     HomeComponent,
     ContactComponent
   ],
-  providers: [ HeroService ],
   bootstrap: [ AppComponent ]
 })
 

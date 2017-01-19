@@ -4,12 +4,7 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   selector: 'my-home',
   templateUrl: 'home.component.html',
-  styleUrls: [ 
-  		'land.component.css',
-  		'about.component.css', 
-  		'projects.component.css',
-  		'services.component.css'
-  ]
+  styleUrls: [ 'home.component.css']
 })
 
 export class HomeComponent {

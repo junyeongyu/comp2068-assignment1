@@ -1,0 +1,104 @@
+/* 1. Land Page */
+.land-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #333333;
+    background: url(resources/img/land-bg.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.land-page .container {
+	 width: 80%;
+	 margin: 6% auto;
+	 background-color: rgba(248, 244, 243, 0.85)
+}
+
+.land-message {
+    position: relative;
+    padding-top: 10%;
+    padding-bottom: 15%;
+}
+
+.land-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
+}
+
+.land-message .describe div {
+	text-align: left;
+	width: 80%;
+	font-size: 1.3em;
+	line-height: 2em;
+	color: #666666;
+	margin: 1em auto;
+}
+
+.land-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.land-message > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+@media(max-width:767px) {
+    .land-message {
+        padding-bottom: 15%;
+    }
+
+    .land-message > h1 {
+        font-size: 3em;
+    }
+    .land-message .describe div {
+        font-size: 1.1em;
+    }
+    ul.land-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.land-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .land-divider {
+        width: 100%;
+    }
+}
+
+/* 2. About Me */
+.section-about {
+    padding: 50px 0;
+    background: url(resources/img/city-bg.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #CCC;
+}
+.section-about .container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+}
+.section-about .container .lead {
+	line-height: 1.8em;
+}
+.section-about .container .img-responsive {
+	/*max-width: 300px;*/
+}
+
+/* 3. Projects */
+.section-projects {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+/* 4. Services */
+.section-services {
+    padding: 50px 0;
+    background-color: #f8f8f8;;
+}
