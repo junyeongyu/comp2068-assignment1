@@ -11,6 +11,7 @@ import { FooterComponent }      from './include/footer.component';
 import { AppComponent }        from './app.component';
 import { HomeComponent }       from './home.component';
 import { ContactComponent }    from './contact.component';
+import { ContactService }      from './contact.service';
 
 @NgModule({
   imports:      [ 
@@ -26,7 +27,8 @@ import { ContactComponent }    from './contact.component';
     HomeComponent,
     ContactComponent
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  providers: [ ContactService ]
 })
 
 export class AppModule { }

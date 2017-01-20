@@ -5,11 +5,10 @@ var express = require('express')
   , mongo = require('./modules/bluebird-mongojs');
 
 var app = express();
-var db = mongo('localhost:27017/test', ['heroes', "mycollection"]);
+var db = mongo('localhost:27017/test', ['contact']);
 
 var index = require('./routes/index');
-var users = require('./routes/users');
-var heroes = require('./routes/heroes');
+var contact = require('./routes/contact');
 
 app.set('port', process.env.PORT || 3000);
 app.set('views', './views');
@@ -25,13 +24,7 @@ app.use(function(req, res, next){ // setting db object in http request
 });
 
 app.use('/', index);
-app.use('/users', users);
-app.use('/heroes', heroes);
-
-// test db (temp)
-db.mycollection.findAsync({abc: "def"}).then(function (data){
-	console.log(data);
-});
+app.use('/contact', contact);
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');

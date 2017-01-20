@@ -1,0 +1,18 @@
+/* 2. About Me */
+.section-about {
+    padding: 50px 0;
+    background: url(resources/img/city-bg.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #CCC;
+}
+.section-about .container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+}
+.section-about .container .lead {
+	line-height: 1.8em;
+}
+.section-about .container .img-responsive {
+	/*max-width: 300px;*/
+}

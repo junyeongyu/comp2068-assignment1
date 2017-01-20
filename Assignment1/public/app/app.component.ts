@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['app.component.css']
 })
 export class AppComponent {
-  title = 'Tour of Heroes';
+
   constructor(private route: ActivatedRoute) { }
 
   ngAfterViewChecked() {

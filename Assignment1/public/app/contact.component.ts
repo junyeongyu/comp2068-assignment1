@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Contact } from './contact';
+
+import { ContactService }      from './contact.service';
 
 @Component({
   moduleId: module.id,
@@ -10,8 +13,22 @@ import { Component } from '@angular/core';
 })
 
 export class ContactComponent {
-
+  @Input()
+  contact: Contact = new Contact;
+  
+  constructor(private contactService: ContactService){}
+   
   ngOnInit(): void {
-
+    
+  }
+  
+  addContact(): void {
+    if (!this.contact.name) { return; }
+    if (!this.contact.email) { return; }
+    if (!this.contact.title) { return; }
+    if (!this.contact.message) { return; }
+    this.contactService.addContact(this.contact).then(contact => {
+      this.contact = new Contact;
+    });
   }
 }

@@ -8,13 +8,12 @@ This Express site includes the pages from your Personal Portfolio 5 pages.<br />
  * A Projects page
  * A Services page
  * A Contact Me page
-
+ 
 ## Technologies
 
 * Back End
  - NodeJS
  - Express
- - MongoDB
 
 * Front End
  - Angular 2

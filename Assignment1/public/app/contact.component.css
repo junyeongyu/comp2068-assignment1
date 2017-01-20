@@ -16,14 +16,23 @@
     margin-bottom: 0;
 }
 
-.section-contact .contact-social-buttons {
+.section-contact .contact-form {
+    margin-top: 1.5em;
+}
+.section-contact .contact-form .btn-primary {
+    margin-top: 0.6em;
+    width: 100%;
+}
+.section-contact .contact-social {
+    margin-top: 2em;
     float: right;
+}
+.section-contact .contact-social .contact-social-buttons {
     margin-top: 0;
 }
 
 @media(max-width:1199px) {
-    .section-contact ul.contact-social-buttons {
-        float: left;
+    .section-contact .contact-social .contact-social-buttons {
         margin-top: 15px;
     }
 }
@@ -34,14 +43,22 @@
         text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
         font-size: 3em;
     }
-
-    .section-contact ul.contact-social-buttons > li {
+	.section-contact .contact-social {
+	    width: 100%;
+	}
+	.section-contact .contact-social .contact-social-buttons {
+        width: 100%;
+        text-align: center;
+    }
+    .section-contact .contact-social .contact-social-buttons > li {
         display: block;
         margin-bottom: 20px;
         padding: 0;
     }
-
     .section-contact ul.contact-social-buttons > li:last-child {
         margin-bottom: 0;
+    }
+    .section-contact ul.contact-social-buttons > li .btn {
+        width: 96%;
     }
 }
