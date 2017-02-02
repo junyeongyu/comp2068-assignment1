@@ -3,7 +3,7 @@ node_modules(ShouldNotBeIgnored)
 jspm_packages
 npm-debug.*
 link-checker-results.txt
-app/**/*.js
+app/**/*.js(ShouldNotBeIgnored)
 *.js.map
 e2e/**/*.js
 e2e/**/*.js.map
