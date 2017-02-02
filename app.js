@@ -26,6 +26,4 @@ app.use(function(req, res, next){ // setting db object in http request
 app.use('/', index);
 app.use('/contact', contact);
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
-});
+module.exports = app;

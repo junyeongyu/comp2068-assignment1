@@ -2,11 +2,13 @@
   "name": "Assignment1",
   "version": "0.0.1",
   "private": true,
+  "main": "./bin/www",
   "scripts": {
-    "start": "node app.js"
+    "start": "node ./bin/www"
   },
   "dependencies": {
 	"body-parser": "~1.15.2",
+    "debug": "~2.2.0",
     "express": "~4.14.0",
     "ejs": "~2.5.2",
     "mongodb": "2.2.20",
