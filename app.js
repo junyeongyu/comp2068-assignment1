@@ -5,7 +5,7 @@ var express = require('express')
   , mongo = require('./modules/bluebird-mongojs');
 
 var app = express();
-var db = mongo('localhost:27017/test', ['contact']);
+var db = mongo('root:abcd@ds139949.mlab.com:39949/junyeong', ['contact']);//mongo('localhost:27017/test', ['contact']);
 
 var index = require('./routes/index');
 var contact = require('./routes/contact');

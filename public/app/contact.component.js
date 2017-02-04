@@ -33,7 +33,12 @@ var ContactComponent = (function () {
             return;
         }
         this.contactService.addContact(this.contact).then(function (contact) {
+            alert('The message is successfully sent');
             _this.contact = new contact_1.Contact;
+        }).catch(function (error) {
+            if (error.ok === false) {
+                alert('Sorry, there is internal problem.');
+            }
         });
     };
     __decorate([

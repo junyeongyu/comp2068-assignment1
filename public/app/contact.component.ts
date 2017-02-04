@@ -28,7 +28,14 @@ export class ContactComponent {
     if (!this.contact.title) { return; }
     if (!this.contact.message) { return; }
     this.contactService.addContact(this.contact).then(contact => {
-      this.contact = new Contact;
+      if (contact) {
+        alert('The message is successfully sent');
+        this.contact = new Contact;
+      }
+    }).catch(error => {
+      if (error.ok === false) {
+        alert('Sorry, there is internal problem.');
+      }
     });
   }
 }
