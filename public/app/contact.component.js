@@ -21,20 +21,26 @@ var ContactComponent = (function () {
     ContactComponent.prototype.addContact = function () {
         var _this = this;
         if (!this.contact.name) {
+            alert('Please input your name');
             return;
         }
         if (!this.contact.email) {
+            alert('Please input your email');
             return;
         }
         if (!this.contact.title) {
+            alert('Please input the title');
             return;
         }
         if (!this.contact.message) {
+            alert('Please input the message.');
             return;
         }
         this.contactService.addContact(this.contact).then(function (contact) {
-            alert('The message is successfully sent');
-            _this.contact = new contact_1.Contact;
+            if (contact) {
+                alert('The message is successfully sent');
+                _this.contact = new contact_1.Contact;
+            }
         }).catch(function (error) {
             if (error.ok === false) {
                 alert('Sorry, there is internal problem.');

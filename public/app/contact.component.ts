@@ -23,10 +23,22 @@ export class ContactComponent {
   }
   
   addContact(): void {
-    if (!this.contact.name) { return; }
-    if (!this.contact.email) { return; }
-    if (!this.contact.title) { return; }
-    if (!this.contact.message) { return; }
+    if (!this.contact.name) { 
+      alert('Please input your name');
+      return; 
+    }
+    if (!this.contact.email) { 
+      alert('Please input your email');
+      return; 
+    }
+    if (!this.contact.title) { 
+      alert('Please input the title');
+      return; 
+    }
+    if (!this.contact.message) { 
+      alert('Please input the message.');
+      return; 
+    }
     this.contactService.addContact(this.contact).then(contact => {
       if (contact) {
         alert('The message is successfully sent');
