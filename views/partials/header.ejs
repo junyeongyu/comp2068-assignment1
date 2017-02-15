@@ -46,6 +46,17 @@
       System.import('app/main').catch(function(err){ console.error(err); });
     </script>
    	
+    <!-- Custom -->
+	<script>
+		// navigation
+		setTimeout(function () {
+			$('body').on('click', '.nav>li', function (event) {
+				$('.navbar-toggle').trigger('click');
+			});
+		},500)
+		
+	</script>
+   	
 </head>
 
 <body>

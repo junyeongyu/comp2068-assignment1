@@ -31,7 +31,7 @@ import { Component } from '@angular/core';
                         <a routerLink="/contact" routerLinkActive="active">Contact Me</a>
                     </li>
                     <li>
-                        <a href="resources/document/specs.docx">Download Specs</a>
+                        <a href="resources/document/J_Y_Resume.docx">Download Resume</a>
                     </li>
                 </ul>
             </div>

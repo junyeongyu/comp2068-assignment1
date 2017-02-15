@@ -97,6 +97,10 @@
     border-bottom: 1px solid #e7e7e7;
 }
 
+.section-projects .title {
+	font-weight: bold;
+}
+
 /* 4. Services */
 .section-services {
     padding: 50px 0;
